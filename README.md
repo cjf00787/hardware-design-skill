@@ -86,4 +86,4 @@ python scripts/verify_designators.py docs/specs/xxxx-设计文档.md
 
 ## License
 
-
+MIT。版权与许可条款见 [LICENSE](LICENSE)。
