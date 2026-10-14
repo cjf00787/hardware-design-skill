@@ -2,6 +2,7 @@
 name: hardware-design
 description: Use when 用户要设计新的硬件/电路板项目：提出做一块板子、画原理图、定 PCB 方案、元器件选型、下载核对芯片手册（datasheet）、写《原理图&PCB绘制说明》设计文档、画硬件拓扑图/系统架构图、整理 BOM，或要把原理图网表/PCB 布局导出给 AI 核对，或询问 schematic design / PCB design / component selection / hardware design doc 怎么做。纯固件编码、纯软件开发不触发。
 agent_created: true
+license: MIT
 ---
 
 # hardware-design — 从想法到《原理图&PCB绘制说明》
@@ -34,7 +35,7 @@ agent_created: true
 
 ## 阶段 0 · 环境与产物组织
 
-1. 检查 `python --version`。skill 自带脚本（`scripts/`）仅用标准库，通常无需安装任何包。项目需要其他工具而缺失时：告知用户将下载到哪里、来源是什么，征得同意后再装。
+1. 检查 `python --version`。skill 自带脚本（`scripts/`）仅用标准库，通常无需安装任何包。项目需要而环境中缺失的工具：向用户说明来源与安装位置，征得同意后再安装。
 2. 在项目内建立工作区（已存在则复用）：
 
    ```text
@@ -78,7 +79,7 @@ agent_created: true
    - 位号全板唯一，任何位号只出现在一个模块的元器件表里
    - 表格必须足以让用户照着画出原理图（位号 + 参数 + 封装 + 连接全备），跨模块只用网络名
    - 关键参数标注出处；拓扑图按 `references/svg-diagram-guide.md` 风格绘制
-4. 自查：运行 `python scripts/verify_designators.py <设计文档路径>`，位号重复与 BOM 不一致清零；再过一遍模板末尾的人工核对清单。
+4. 自查：运行项目 `scripts/` 内的位号检查脚本（阶段 0 已从 skill 复制）：`python scripts/verify_designators.py <设计文档路径>`，位号重复与 BOM 不一致清零；再过一遍模板末尾的人工核对清单。
 5. **G3：交用户验收**，并提议阶段 4 的两个可选审查。
 
 ## 阶段 4 · 可选审查（用户发起）
