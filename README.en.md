@@ -43,7 +43,7 @@ cp -r skill/hardware-design ~/.workbuddy/skills/hardware-design
 
 Optional dependency: Python 3.6+; the bundled tools use only the standard library.
 
-> Note: the skill content (SKILL.md and references) is written in Chinese.
+> Note: the skill instructions (SKILL.md and references) are written in Chinese. Deliverables — design documents, proposals, review reports — are written in the language of your conversation.
 
 ## Example session
 
