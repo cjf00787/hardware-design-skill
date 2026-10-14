@@ -1,3 +1,5 @@
+简体中文 | [English](./README.en.md)
+
 # hardware-design
 
 从想法到《原理图&PCB绘制说明》的硬件设计 Agent Skill，适用于 Claude Code、Codex、WorkBuddy 等支持 SKILL.md 标准的 Agent。
@@ -6,10 +8,11 @@ AI 承担调研、方案、选型核算、设计文档撰写与 SVG 拓扑图；
 
 ## 定位
 
-现有硬件类 skill 有三类思路：通过 MCP 驱动 EDA 软件自动画图下单、面向 KiCad 的全流程技能集、对已画好的原理图做证据审查。本 skill 补充三者都未覆盖的环节——画图之前的设计文档写作。赛道目前最大的项目是 aklofas/kicad-happy，约 1.4k 星标（2026 年 10 月查询）。
+现有硬件类 skill 集中在画图阶段：嘉立创官方提供驱动自家 EDA 的 Skill 家族，KiCad 生态有全流程技能集与 MCP 插件，另有面向已画好原理图的证据审查。画图之前的设计文档写作环节仍无人覆盖，本 skill 补的就是这一段。
 
 | 项目 | 思路 | 与本 skill 的关系 |
 | --- | --- | --- |
+| [嘉立创官方 easyeda-* skills](https://github.com/easyeda/easyeda-api-skill) | 官方 MCP/Skill 家族：驱动嘉立创 EDA 画图、DRC、格式生成 | 画图阶段的自动化，与本 skill 互补：先文档、后画图 |
 | [aklofas/kicad-happy](https://github.com/aklofas/kicad-happy) | KiCad 全流程技能集：原理图分析、PCB 审查、EMC 预合规、SPICE 仿真、选型与制造准备 | 面向 KiCad 生态的审查与仿真，不含画图前的设计文档写作 |
 | [oxtaw/pcb-skill](https://github.com/oxtaw/pcb-skill) | 通过 MCP 驱动 EasyEDA Pro 自动画图、下单 | 不依赖 EDA 自动化，覆盖其未涉及的设计文档写作 |
 | [ericshang98/hw-review](https://github.com/ericshang98/hw-review) | 对已画好的原理图做逐引脚证据审查 | 在画图之前沉淀设计依据；画完后可配合做网表/布局核对 |
