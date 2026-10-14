@@ -86,4 +86,4 @@ python scripts/verify_designators.py docs/specs/xxxx-设计文档.md
 
 ## License
 
-MIT。发布前把 `LICENSE` 里的版权行替换成你的名字。
+
