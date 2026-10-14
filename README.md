@@ -73,8 +73,6 @@ skill/hardware-design/
     └── verify_designators.py     位号重复与 BOM 一致性检查
 ```
 
-SKILL.md 与 references 全部为中文 Markdown，点击文件即可阅读；scripts 是配套的 Python 工具，注释同样为中文。
-
 ## 设计原则
 
 1. 文档驱动：AI 不操作 EDA、不布线，原理图与 PCB 由用户绘制。

@@ -75,8 +75,6 @@ skill/hardware-design/
     └── verify_designators.py     designator duplication and BOM consistency check
 ```
 
-SKILL.md and the references are written in Chinese (Markdown renders as-is on GitHub); the scripts are Python tools with Chinese comments.
-
 ## Design principles
 
 1. Document-driven: the AI never operates the EDA and never routes; schematics and PCB are drawn by the user.
